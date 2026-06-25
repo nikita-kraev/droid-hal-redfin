@@ -9,6 +9,15 @@
 
 %define installable_zip 1
 
+%define makefstab_skip_entries /product /system /system_ext /vendor
+
+%define straggler_files \
+/bugreports\
+/cache\
+/d\
+/sdcard\
+%{nil}
+
 %include rpm/dhd/droid-hal-device.inc
 
 # IMPORTANT if you want to comment out any macros in your .spec, delete the %
