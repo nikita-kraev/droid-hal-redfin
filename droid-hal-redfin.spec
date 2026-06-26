@@ -8,14 +8,18 @@
 %define device_pretty Pixel 5
 
 %define installable_zip 1
+%define droid_target_aarch64 1
 
-%define makefstab_skip_entries /product /system /system_ext /vendor
+%define makefstab_skip_entries / /product /system /system_ext /vendor /system_root
 
 %define straggler_files \
-/bugreports\
-/cache\
-/d\
-/sdcard\
+/adb_keys \
+/bugreports \
+/cache \
+/d \
+/dsp \
+/persist \
+/sdcard \
 %{nil}
 
 %include rpm/dhd/droid-hal-device.inc
